@@ -13,7 +13,7 @@
 NAME1 = checker
 NAME2 = push_swap
 
-SRCS1 = checker.c \
+CFILES1 := $(addprefix ./srcs/, checker.c \
 		adt.c \
 		command1.c \
 		command2.c \
@@ -23,9 +23,9 @@ SRCS1 = checker.c \
 		free.c \
 		run_command.c \
 		find_num.c \
-		handle_args.c
+		handle_args.c )
 
-SRCS2 = push_swap.c \
+CFILES2 = $(addprefix ./srcs/, push_swap.c \
 		adt.c \
 		command1.c \
 		command2.c \
@@ -42,60 +42,33 @@ SRCS2 = push_swap.c \
 		return_numbers1.c \
 		return_numbers2.c \
 		sort_top1.c \
-		sort_top2.c 
+		sort_top2.c )
 
-SRCO1 = checker.o \
-		adt.o \
-		command1.o \
-		command2.o \
-		print.o \
-		sorting.o \
-		duplicate_check.o \
-		free.o \
-		run_command.o \
-		find_num.o \
-		handle_args.o
+OFILES1 := $(CFILES1:.c=.o)
 
-SRCO2 = push_swap.o \
-		adt.o \
-		command1.o \
-		command2.o \
-		print.o \
-		handle_small.o \
-		handle_big.o \
-		find_num.o \
-		print_command1.o \
-		print_command2.o \
-		sorting.o \
-		duplicate_check.o \
-		free.o \
-		handle_args.o \
-		return_numbers1.o \
-		return_numbers2.o \
-		sort_top1.o \
-		sort_top2.o
+OFILES2 := $(CFILES2:.c=.o)
 
-FLAGS = -Wall -Wextra -Werror -c
+INCLUDES := -I includes
 
-LIBFT = libft -lft
+LIBFT := ./libft/
 
-F = -fsanitize=address
+LDFLAGS := -L $(LIBFT) -lft
+
+CFLAGS := -Wall -Werror -Wextra
 
 all: $(NAME1) $(NAME2)
 
-$(NAME1): 
+$(NAME1): $(OFILES1)
 	@make -C $(LIBFT)
-	@gcc $(FLAGS) $(SRCS1) -I.
-	@gcc $(SRCO1) -L $(LIBFT) -o $(NAME1) 
+	@$(CC) -o $@ $^ libft/libft.a $(LDFLAGS)
 
-$(NAME2): 
-	@gcc $(FLAGS) $(SRCS2) -I.
-	@gcc $(SRCO2) -L $(LIBFT) -o $(NAME2)
+$(NAME2): $(OFILES2)
+	@$(CC) -o $@ $^ libft/libft.a $(LDFLAGS)
 
 clean:
 	@make -C libft/ clean
-	@rm -f $(SRCO1)
-	@rm -f $(SRCO2)
+	@rm -f $(OFILES1)
+	@rm -f $(OFILES2)
 
 fclean: clean
 	@make -C libft/ fclean

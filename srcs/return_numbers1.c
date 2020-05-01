@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_command1.c                                   :+:      :+:    :+:   */
+/*   return_numbers1.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmiyake <hmiyake@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/23 11:22:12 by hmiyake           #+#    #+#             */
-/*   Updated: 2019/08/30 14:35:23 by hmiyake          ###   ########.fr       */
+/*   Created: 2019/08/30 17:31:52 by hmiyake           #+#    #+#             */
+/*   Updated: 2019/08/30 19:37:45 by hmiyake          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	sa_print(t_stack *a)
+void	return_three(t_stack *a, t_stack *b)
 {
-	sa_sb(a);
-	ft_printf("sa\n");
+	pa_print(a, b);
+	pa_print(a, b);
+	pa_print(a, b);
+	sort_top_three(a);
 }
 
-void	sb_print(t_stack *b)
+void	return_five_or_less(t_stack *a, t_stack *b, int size)
 {
-	sa_sb(b);
-	ft_printf("sb\n");
-}
-
-void	ss_print(t_stack *a, t_stack *b)
-{
-	sa_sb(a);
-	sa_sb(b);
-	ft_printf("ss\n");
-}
-
-void	pa_print(t_stack *a, t_stack *b)
-{
-	pa_pb(a, b);
-	ft_printf("pa\n");
-}
-
-void	pb_print(t_stack *b, t_stack *a)
-{
-	pa_pb(b, a);
-	ft_printf("pb\n");
+	if (size == 3)
+		return_three(a, b);
+	else if (size == 4)
+		return_four(a, b);
+	else
+		return_five(a, b);
 }

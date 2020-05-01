@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   return_numbers1.c                                  :+:      :+:    :+:   */
+/*   free.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmiyake <hmiyake@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/30 17:31:52 by hmiyake           #+#    #+#             */
-/*   Updated: 2019/08/30 19:37:45 by hmiyake          ###   ########.fr       */
+/*   Created: 2019/08/27 21:18:10 by hmiyake           #+#    #+#             */
+/*   Updated: 2019/08/28 22:14:12 by hmiyake          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	return_three(t_stack *a, t_stack *b)
+void	free_array(char **arr, int num)
 {
-	pa_print(a, b);
-	pa_print(a, b);
-	pa_print(a, b);
-	sort_top_three(a);
-}
+	int i;
 
-void	return_five_or_less(t_stack *a, t_stack *b, int size)
-{
-	if (size == 3)
-		return_three(a, b);
-	else if (size == 4)
-		return_four(a, b);
-	else
-		return_five(a, b);
+	i = 0;
+	while (i < num)
+	{
+		free(arr[i]);
+		i++;
+	}
 }

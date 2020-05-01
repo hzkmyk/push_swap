@@ -1,25 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   free.c                                             :+:      :+:    :+:   */
+/*   print_command1.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmiyake <hmiyake@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/27 21:18:10 by hmiyake           #+#    #+#             */
-/*   Updated: 2019/08/28 22:14:12 by hmiyake          ###   ########.fr       */
+/*   Created: 2019/08/23 11:22:12 by hmiyake           #+#    #+#             */
+/*   Updated: 2019/08/30 14:35:23 by hmiyake          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	free_array(char **arr, int num)
+void	sa_print(t_stack *a)
 {
-	int i;
+	sa_sb(a);
+	ft_printf("sa\n");
+}
 
-	i = 0;
-	while (i < num)
-	{
-		free(arr[i]);
-		i++;
-	}
+void	sb_print(t_stack *b)
+{
+	sa_sb(b);
+	ft_printf("sb\n");
+}
+
+void	ss_print(t_stack *a, t_stack *b)
+{
+	sa_sb(a);
+	sa_sb(b);
+	ft_printf("ss\n");
+}
+
+void	pa_print(t_stack *a, t_stack *b)
+{
+	pa_pb(a, b);
+	ft_printf("pa\n");
+}
+
+void	pb_print(t_stack *b, t_stack *a)
+{
+	pa_pb(b, a);
+	ft_printf("pb\n");
 }

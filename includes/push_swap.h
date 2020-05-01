@@ -14,8 +14,8 @@
 # define PUSH_SWAP_H
 
 # include <stdlib.h>
-# include "libft/libft.h"
-# include "libft/ft_printf.h"
+# include "../libft/libft.h"
+# include "../libft/ft_printf.h"
 
 typedef struct		s_stack {
 	struct s_node	*top;

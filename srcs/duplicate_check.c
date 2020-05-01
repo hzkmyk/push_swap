@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   command2.c                                         :+:      :+:    :+:   */
+/*   duplicate_check.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmiyake <hmiyake@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/08/09 18:08:25 by hmiyake           #+#    #+#             */
-/*   Updated: 2019/08/28 22:12:04 by hmiyake          ###   ########.fr       */
+/*   Created: 2019/08/27 19:54:23 by hmiyake           #+#    #+#             */
+/*   Updated: 2019/08/28 22:12:46 by hmiyake          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void	rra_rrb(t_stack *stack)
+int	is_dup(unsigned int num)
 {
-	t_node	*temp;
+	static int	num_arr[4294967295];
 
-	temp = stack->top;
-	if (!is_empty(stack) && stack->top->next)
+	if (num_arr[num] == 0)
 	{
-		while (temp->next->next)
-			temp = temp->next;
-		push(stack, temp->next->num);
-		stack->size -= 1;
-		free(temp->next);
-		temp->next = NULL;
+		num_arr[num] = 1;
+		return (0);
 	}
-}
-
-void	rrr(t_stack *stack_a, t_stack *stack_b)
-{
-	rra_rrb(stack_a);
-	rra_rrb(stack_b);
+	else
+		return (1);
 }
