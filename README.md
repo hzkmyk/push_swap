@@ -7,7 +7,7 @@ This is a program that sorts a list of numbers using a modified stack and a limi
 <p align="center"><img src="https://github.com/hzkmyk/push_swap/blob/master/images/firststep.gif" alt="Gif of the first step"></p>
 ### Stack a has five or less numbers, sort.
 <p align="center"><img width="400px" height="400px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(9).png" alt="Gif of the first step"></p>
-### Stack b has five or less numbers, sort.
+### Stack b has five or less numbers, sort them so they end up being on top of stack a.
 <p align="center"><img width="400px" height="400px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(10).png" alt="Gif of the first step"></p>
 <p align="center"><img src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif" alt="Gif of push_swap"></p>
 
