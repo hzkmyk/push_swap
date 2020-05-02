@@ -66,3 +66,25 @@ void	rr(t_stack *stack_a, t_stack *stack_b)
 	ra_rb(stack_a);
 	ra_rb(stack_b);
 }
+
+void	rra_rrb(t_stack *stack)
+{
+	t_node	*temp;
+
+	temp = stack->top;
+	if (!is_empty(stack) && stack->top->next)
+	{
+		while (temp->next->next)
+			temp = temp->next;
+		push(stack, temp->next->num);
+		stack->size -= 1;
+		free(temp->next);
+		temp->next = NULL;
+	}
+}
+
+void	rrr(t_stack *stack_a, t_stack *stack_b)
+{
+	rra_rrb(stack_a);
+	rra_rrb(stack_b);
+}

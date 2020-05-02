@@ -15,8 +15,7 @@ NAME2 = push_swap
 
 CFILES1 := $(addprefix ./srcs/, checker.c \
 		adt.c \
-		command1.c \
-		command2.c \
+		command.c \
 		print.c \
 		sorting.c \
 		duplicate_check.c \
@@ -27,20 +26,17 @@ CFILES1 := $(addprefix ./srcs/, checker.c \
 
 CFILES2 = $(addprefix ./srcs/, push_swap.c \
 		adt.c \
-		command1.c \
-		command2.c \
+		command.c \
 		print.c \
 		handle_small.c \
 		handle_big.c \
 		find_num.c \
-		print_command1.c \
-		print_command2.c \
+		print_command.c \
 		sorting.c \
 		duplicate_check.c \
 		free.c \
 		handle_args.c \
-		return_numbers1.c \
-		return_numbers2.c \
+		return_numbers.c \
 		sort_top1.c \
 		sort_top2.c )
 

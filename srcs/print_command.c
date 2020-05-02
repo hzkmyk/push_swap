@@ -42,3 +42,34 @@ void	pb_print(t_stack *b, t_stack *a)
 	pa_pb(b, a);
 	ft_printf("pb\n");
 }
+
+void	ra_print(t_stack *a)
+{
+	ra_rb(a);
+	ft_printf("ra\n");
+}
+
+void	rb_print(t_stack *b)
+{
+	ra_rb(b);
+	ft_printf("rb\n");
+}
+
+void	rr_print(t_stack *a, t_stack *b)
+{
+	ra_rb(a);
+	ra_rb(b);
+	ft_printf("rr\n");
+}
+
+void	rra_print(t_stack *a)
+{
+	rra_rrb(a);
+	ft_printf("rra\n");
+}
+
+void	rrb_print(t_stack *b)
+{
+	rra_rrb(b);
+	ft_printf("rrb\n");
+}

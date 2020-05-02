@@ -12,10 +12,15 @@
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
-
+# define FUNCNUM 11
 # include <stdlib.h>
 # include "../libft/libft.h"
 # include "../libft/ft_printf.h"
+
+typedef struct		s_dsptch
+{
+	char			*name;
+}					t_dsptch;
 
 typedef struct		s_stack {
 	struct s_node	*top;
@@ -37,17 +42,13 @@ void				push_backwords(t_stack *stack, int num);
 int					pop(t_stack *stack);
 
 /*
-** command1.c
+** command.c
 */
 void				sa_sb(t_stack *stack);
 void				ss(t_stack *stack_a, t_stack *stack_b);
 void				pa_pb(t_stack *stack_one, t_stack *stack_two);
 void				ra_rb(t_stack *stack);
 void				rr(t_stack *stack_a, t_stack *stack_b);
-
-/*
-** command2.c
-*/
 void				rra_rrb(t_stack *stack);
 void				rrr(t_stack *stack_a, t_stack *stack_b);
 
@@ -66,17 +67,13 @@ void				print_result(t_stack *a, t_stack *b);
 void				rrr_print(t_stack *a, t_stack *b);
 
 /*
-** print_command1.c
+** print_command.c
 */
 void				sa_print(t_stack *a);
 void				sb_print(t_stack *b);
 void				ss_print(t_stack *a, t_stack *b);
 void				pa_print(t_stack *a, t_stack *b);
 void				pb_print(t_stack *b, t_stack *a);
-
-/*
-** print_command2.c
-*/
 void				ra_print(t_stack *a);
 void				rb_print(t_stack *b);
 void				rr_print(t_stack *a, t_stack *b);
@@ -137,14 +134,10 @@ void				run_command(t_stack *command, t_stack *a, t_stack *b);
 void				get_args(int argc, char **argv, t_stack *a);
 
 /*
-** return_numbers1.c
+** return_numbers.c
 */
 void				return_three(t_stack *a, t_stack *b);
 void				return_five_or_less(t_stack *a, t_stack *b, int size);
-
-/*
-** return_numbers2.c
-*/
 void				return_four(t_stack *a, t_stack *b);
 void				return_five(t_stack *a, t_stack *b);
 

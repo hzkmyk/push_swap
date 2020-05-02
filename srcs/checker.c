@@ -12,32 +12,35 @@
 
 #include "../includes/push_swap.h"
 
-void	save_command(char *input, t_stack *command)
+t_dsptch	g_dsptch_table[FUNCNUM] = {
+	{"sa"},
+	{"sb"},
+	{"ss"},
+	{"pa"},
+	{"pb"},
+	{"ra"},
+	{"rb"},
+	{"rr"},
+	{"rra"},
+	{"rrb"},
+	{"rrr"},
+};
+
+void	dispatch(char *input, t_stack *command)
 {
-	if (!ft_strcmp("sa", input))
-		push_backwords(command, 1);
-	else if (!ft_strcmp("sb", input))
-		push_backwords(command, 2);
-	else if (!ft_strcmp("ss", input))
-		push_backwords(command, 3);
-	else if (!ft_strcmp("pa", input))
-		push_backwords(command, 4);
-	else if (!ft_strcmp("pb", input))
-		push_backwords(command, 5);
-	else if (!ft_strcmp("ra", input))
-		push_backwords(command, 6);
-	else if (!ft_strcmp("rb", input))
-		push_backwords(command, 7);
-	else if (!ft_strcmp("rr", input))
-		push_backwords(command, 8);
-	else if (!ft_strcmp("rra", input))
-		push_backwords(command, 9);
-	else if (!ft_strcmp("rrb", input))
-		push_backwords(command, 10);
-	else if (!ft_strcmp("rrr", input))
-		push_backwords(command, 11);
-	else
-		push_backwords(command, 0);
+	int	i;
+
+	i = 1;
+	while (i < FUNCNUM + 1)
+	{
+		if (ft_strequ(g_dsptch_table[i - 1].name, input))
+		{
+			push_backwords(command, i);
+			return ;
+		}
+		i++;
+	}
+	push_backwords(command, 0);
 }
 
 int		main(int argc, char **argv)
@@ -57,7 +60,8 @@ int		main(int argc, char **argv)
 	command = init();
 	while (get_next_line(0, &input) > 0)
 	{
-		save_command(input, command);
+		dispatch(input, command);
+		// save_command(input, command);
 		if (input)
 			ft_strdel(&input);
 	}
