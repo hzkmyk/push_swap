@@ -6,9 +6,8 @@ This is a program that sorts a list of numbers using a modified stack and a limi
 ### Find the middle number, send the smaller half to stack b, keep going until stack a has five numbers or less.
 <p align="center"><img src="https://github.com/hzkmyk/push_swap/blob/master/images/firststep.gif" alt="Gif of the first step"></p>
 ### Stack a has five or less numbers, sort.
-<p align="center"><img width="300px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(9).png" alt="Gif of the first step"></p>
-![Image of push_swap functions](https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(9).png)
+<p align="center"><img width="400px" height="400px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(9).png" alt="Gif of the first step"></p>
 ### Stack b has five or less numbers, sort.
-![Image of push_swap functions](https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(10).png)
+<p align="center"><img width="400px" height="400px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(10).png" alt="Gif of the first step"></p>
 <p align="center"><img src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif" alt="Gif of push_swap"></p>
 
