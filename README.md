@@ -17,9 +17,7 @@ This is a program that sorts a list of numbers using a modified stack and a limi
 <h3>Sort them again</h3>
 <p align="center"><img width="300px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(14).png" alt="pic">→
 <img width="300px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(15).png" alt="pic">→<img width="300px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(16).png" alt="pic"></p>
-
-
-
-
-<p align="center"><img src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif" alt="Gif of push_swap"></p>
+<h3>Keep doing the same steps until all the numbers are sorted and put back to stack a.</h3>
+<h3>The sorting process looks like this.</h3>
+<p align="center"><img width="450px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif" alt="Gif of push_swap"></p>
 
