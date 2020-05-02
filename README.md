@@ -1,10 +1,10 @@
 # push_swap
 This is a program that sorts a list of numbers using a modified stack and a limited amount of movesets in the most efficient way possible.
-## There are 11 commands that move numbers in stack a and stack b.
+<h1>There are 11 commands that move numbers in stack a and stack b.</h1>
 <p align="center"><img width="600px" height="350px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.png" alt="pic"></p>
 ## Let's assume that we get 50numbers on stack a.
 ### Find the middle number, send the smaller half to stack b, keep going until stack a has five numbers or less.
-<p align="center"><img width="400px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/firststep.gif" alt="Gif of the first step"></p>
+<p align="center"><img width="450px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/firststep.gif" alt="Gif of the first step"></p>
 ### Stack a has five or less numbers, sort.
 <p align="center"><img width="300px" height="300px" src="https://github.com/hzkmyk/push_swap/blob/master/images/push_swap2%20(9).png" alt="pic"></p>
 ### Stack b has five or less numbers, sort them so they end up being on top of stack a.
