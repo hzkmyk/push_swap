@@ -3,4 +3,9 @@ This is a program that sorts a list of numbers using a modified stack and a limi
 ## There are 11 commands that move numbers in stack a and stack b.
 ![Image of push_swap functions](https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.png)
 
-![Gif of push_swap functions](https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif)
+![Gif of push_swap functions](https://github.com/hzkmyk/push_swap/blob/master/images/push_swap.gif?style=center)
+
+img[src$="center"] {
+  display:block;
+  margin: 0 auto;
+}
